@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moverite</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" media="screen" href="webb.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400&display=swap" rel="stylesheet">
+    
+    <style>
+ 
+.anybutton {     
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        position: absolute;
+        left:-5px;
+        top: 37px;     
+}
+
+    /* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #132c33;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color:transparent;
+  text-align: center;
+  padding:110px 80px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav b {
+    top: 0;
+    right: auto;
+    left: 100%;
+    margin-top: 0;
+    margin-left: dropdown-spacer;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #132c33;
+  color: black;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px 250px;
+  border: none;
+  margin-top: 40px;
+  margin-right: 350px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 140px;
+  }
+  .topnav input[type=text] {
+    border: 10px solid rgba(204, 204, 204, 0.699);
+  }
+}
+.scrollmenu {
+  background-color: transparent;
+  width: 1500px;
+  height: 420px;
+  border: 0px dotted black;
+  overflow-x: scroll; /* Add the ability to scroll */
+  white-space: nowrap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollmenu::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollmenu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: transparent;
+  text-align: center;
+  padding: 5px; 
+}
+
+div.scrollmenu a:hover {
+  background-color: transparent;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 9px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border:1px black;
+        background-color: #51C4D3;
+}
+
+.dropdown-content a:hover {
+  background-color: #132c33;
+  color: rgb(36, 202, 207);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.round-button{
+  min-width: 60px;
+  max-width:120px;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-style: none;
+  color: white;
+  background-color: #51C4D3;
+  border-radius: 100%;
+  overflow: none;
+  text-align: center;
+  padding:0;
+}
+.round-button:before {
+  content:'';
+  display:inline-block;;
+  vertical-align:middle;
+  padding-top:100%;
+}
+span {
+  display:inline-block;
+  vertical-align:middle;
+  max-width:90%;
+}
+.round-button:active{
+  background-color: #132c33;
+}
+    </style>
+
+  
+</head>
+<body style="background-color: #132c33;">
+  <div class="topnav">
+      <a href="/home"><img src="https://i.postimg.cc/L6wV1qgK/home.png" style =" width:100px; height:100px;position: absolute ; top:20px ;left:50px;" ></a>
+      <div class="container">
+          <div class="dropdown dropright">
+            <button type = "anybutton"class="anybutton" data-toggle="dropdown">
+              <img src=https://i.postimg.cc/8ky4TX1C/ham.png width="50" height="50">
+            </button>
+            <div class="dropdown-content">
+              <a style="font-family: 'Kanit', sans-serif;" href="/newhot">ภาพยนตร์ใหม่มาแรง</a>
+              <a  style="font-family: 'Kanit', sans-serif;"href="/hot">ภาพยนตร์มาแรง</a>
+              <a  style="font-family: 'Kanit', sans-serif;"href="/ctg">แบ่งตามประเภท</a>
+              <a  href="/watch">Watched List</a>
+              <a  href="/interest">Interest List</a>
+            </div>
+          </div>
+          </div>
+          <input type="text" style="font-family: 'Kanit', sans-serif;"placeholder="ค้นหาภาพยนตร์">
+          <img src="https://i.postimg.cc/wT7VM5vQ/search.png" style =" width:70px; height:70px;position: absolute ; top:30px ;right:250px;">
+
+          <div class="dropdown dropright" style="position: absolute;right: 150px;">
+            <button type = "anybutton"class="anybutton" data-toggle="dropdown">
+              <img src="https://i.postimg.cc/4N5q4CYw/kisspng-red-x-letter-computer-icons-red-x-5ac2fb75b18a39-2414215415227277977272.png" width="50" height="50">
+            </button>
+            <div class="dropdown-content">
+              <a href="/logout" style="color: brown; box-shadow: brown;position: absolute;top: 40px; right :95px " >Logout</a>
+            </div>
+          </div>
+  </div>
+</div>
+<div class = 'col1' style="text-align: center">
+  <a style="color:white;font-family: 'Kanit', sans-serif;font-size: 30px;">Trailer</a>
+  <br><br>
+  <iframe width="628" height="350" src="https://www.youtube.com/embed/?autoplay=1&mute=1">
+  </iframe><br>
+  <a style="color:white;font-family: 'Kanit', sans-serif;font-size: 20px;">ให้คะแนนภาพยนตร์เรื่องนี้</a>
+  <br>
+  <button class="round-button"><span>1</span></button>
+  <button class="round-button"><span>2</span></button>
+  <button class="round-button"><span>3</span></button>
+  <button class="round-button"><span>4</span></button>
+  <button class="round-button"><span>5</span></button>
+  </div>
+
+</body>
+</html>
